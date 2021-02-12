@@ -453,6 +453,10 @@ class HTMLProcessor extends StaticHTMLOutput {
                     $this->processImage( $element );
                     $this->processImageSrcSet( $element );
                     break;
+                case 'source':
+                    $this->processGenericSrc( $element );
+                    $this->processImageSrcSet( $element );
+                    break;
                 case 'head':
                     $this->processHead( $element );
                     break;
@@ -481,7 +485,6 @@ class HTMLProcessor extends StaticHTMLOutput {
                         'ilayer',
                         'layer',
                         'script',
-                        'source',
                         'video',
                         'xml',
                     ];
